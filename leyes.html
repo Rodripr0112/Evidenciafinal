@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ley de Senos y Cosenos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="student-info">
+    <h1>Ley de Senos y Ley de Cosenos</h1>
+    <div class="info-grid">
+      <p><strong>Nombre:</strong> Rodrigo Zapata Nivon</p>
+      <p><strong>Materia:</strong> Tecnología de la Información II</p>
+      <p><strong>Grupo:</strong> 404</p>
+      <p><strong>Tarea:</strong> Evidencia Final</p>
+      <p><strong>Profesor:</strong> Alejandro León Govea</p>
+      <p><strong>Fecha:</strong> 7 de Mayo del 2026</p>
+    </div>
+  </header>
+
+  <div class="page-nav top-nav">
+    <a href="calculator.html" class="nav-link">← Calculadora</a>
+    <span class="page-indicator">Página 3 de 3</span>
+    <a href="index.html" class="nav-link">Portada →</a>
+  </div>
+
+  <main class="leyes-main">
+
+    <!-- ── LEY DE SENOS ────────────────────────────────────────── -->
+    <section class="ley-section ley-senos">
+      <div class="ley-header">
+        <div class="ley-icon">S</div>
+        <div>
+          <h2>Ley de Senos</h2>
+          <p class="ley-subtitle">Relaciona lados y ángulos opuestos entre sí</p>
+        </div>
+      </div>
+
+      <div class="formula-box senos-formula">
+        <div class="formula-main">
+          <div class="fraction-group">
+            <div class="frac"><span class="frac-num">a</span><span class="frac-bar"></span><span class="frac-den">sen A</span></div>
+            <span class="eq">=</span>
+            <div class="frac"><span class="frac-num">b</span><span class="frac-bar"></span><span class="frac-den">sen B</span></div>
+            <span class="eq">=</span>
+            <div class="frac"><span class="frac-num">c</span><span class="frac-bar"></span><span class="frac-den">sen C</span></div>
+          </div>
+        </div>
+        <p class="formula-alt">También expresada como: sen A / a = sen B / b = sen C / c</p>
+      </div>
+
+      <div class="ley-body">
+        <div class="ley-col">
+          <h3>¿Qué significa?</h3>
+          <p>En cualquier triángulo, el cociente entre un lado y el seno del ángulo opuesto a ese lado es <strong>constante</strong>. Esto permite calcular lados o ángulos desconocidos siempre que se conozcan al menos un par (lado + ángulo opuesto).</p>
+
+          <h3>¿Cuándo se usa?</h3>
+          <ul class="caso-list">
+            <li><span class="caso-badge asa">ASA</span> Dos ángulos y el lado comprendido entre ellos</li>
+            <li><span class="caso-badge aas">AAS</span> Dos ángulos y un lado no comprendido</li>
+            <li><span class="caso-badge ssa">SSA</span> Dos lados y un ángulo no comprendido <em>(caso ambiguo)</em></li>
+          </ul>
+        </div>
+
+        <div class="ley-col">
+          <h3>Ejemplo resuelto (ASA)</h3>
+          <div class="ejemplo-box">
+            <p class="ejemplo-dato"><strong>Datos:</strong> A = 45°, B = 60°, c = 10</p>
+            <div class="paso">
+              <span class="paso-num">1</span>
+              <div>
+                <p>Calcular el ángulo faltante:</p>
+                <p class="formula-line">C = 180° − 45° − 60° = <strong>75°</strong></p>
+              </div>
+            </div>
+            <div class="paso">
+              <span class="paso-num">2</span>
+              <div>
+                <p>Aplicar la Ley de Senos:</p>
+                <p class="formula-line">a / sen 45° = 10 / sen 75°</p>
+                <p class="formula-line">a = 10 × sen 45° / sen 75° ≈ <strong>7.3205</strong></p>
+              </div>
+            </div>
+            <div class="paso">
+              <span class="paso-num">3</span>
+              <div>
+                <p class="formula-line">b = 10 × sen 60° / sen 75° ≈ <strong>8.9658</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top:16px">Caso ambiguo (SSA)</h3>
+          <div class="ambiguo-box">
+            <p>Dados dos lados <em>a</em>, <em>b</em> y el ángulo <em>A</em> (opuesto a <em>a</em>), se calcula h = b · sen A.</p>
+            <ul class="ambiguo-list">
+              <li><strong>a &lt; h</strong> → Sin solución</li>
+              <li><strong>a = h</strong> → 1 solución (triángulo rectángulo)</li>
+              <li><strong>h &lt; a &lt; b</strong> → 2 soluciones</li>
+              <li><strong>a ≥ b</strong> → 1 solución</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LEY DE COSENOS ──────────────────────────────────────── -->
+    <section class="ley-section ley-cosenos">
+      <div class="ley-header">
+        <div class="ley-icon cosenos-icon">C</div>
+        <div>
+          <h2>Ley de Cosenos</h2>
+          <p class="ley-subtitle">Generalización del Teorema de Pitágoras para cualquier triángulo</p>
+        </div>
+      </div>
+
+      <div class="formula-box cosenos-formula">
+        <div class="formula-main cosenos-formulas">
+          <p>a² = b² + c² − 2bc · cos A</p>
+          <p>b² = a² + c² − 2ac · cos B</p>
+          <p>c² = a² + b² − 2ab · cos C</p>
+        </div>
+        <p class="formula-alt">Despejando el ángulo: cos A = (b² + c² − a²) / 2bc</p>
+      </div>
+
+      <div class="ley-body">
+        <div class="ley-col">
+          <h3>¿Qué significa?</h3>
+          <p>La Ley de Cosenos relaciona los tres lados de un triángulo con uno de sus ángulos. Cuando el ángulo es 90°, cos 90° = 0 y la fórmula se reduce al <strong>Teorema de Pitágoras</strong> (c² = a² + b²).</p>
+
+          <h3>¿Cuándo se usa?</h3>
+          <ul class="caso-list">
+            <li><span class="caso-badge sss">SSS</span> Los tres lados son conocidos → encontrar los ángulos</li>
+            <li><span class="caso-badge sas">SAS</span> Dos lados y el ángulo comprendido → encontrar el tercer lado</li>
+          </ul>
+
+          <h3>Conexión con Pitágoras</h3>
+          <div class="pitag-box">
+            <p>Si C = 90°:</p>
+            <p class="formula-line">c² = a² + b² − 2ab · <strong>cos 90°</strong></p>
+            <p class="formula-line">c² = a² + b² − 2ab · <strong>0</strong></p>
+            <p class="formula-line">c² = a² + b² ✓</p>
+          </div>
+        </div>
+
+        <div class="ley-col">
+          <h3>Ejemplo resuelto (SAS)</h3>
+          <div class="ejemplo-box">
+            <p class="ejemplo-dato"><strong>Datos:</strong> a = 5, b = 7, C = 60°</p>
+            <div class="paso">
+              <span class="paso-num">1</span>
+              <div>
+                <p>Calcular el lado desconocido c:</p>
+                <p class="formula-line">c² = 5² + 7² − 2(5)(7) · cos 60°</p>
+                <p class="formula-line">c² = 25 + 49 − 70 · 0.5 = 39</p>
+                <p class="formula-line">c = √39 ≈ <strong>6.245</strong></p>
+              </div>
+            </div>
+            <div class="paso">
+              <span class="paso-num">2</span>
+              <div>
+                <p>Calcular el ángulo A:</p>
+                <p class="formula-line">cos A = (b² + c² − a²) / 2bc</p>
+                <p class="formula-line">cos A = (49 + 39 − 25) / (2·7·6.245)</p>
+                <p class="formula-line">A = arccos(0.7352) ≈ <strong>42.64°</strong></p>
+              </div>
+            </div>
+            <div class="paso">
+              <span class="paso-num">3</span>
+              <div>
+                <p class="formula-line">B = 180° − 60° − 42.64° ≈ <strong>77.36°</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top:16px">Ejemplo resuelto (SSS)</h3>
+          <div class="ejemplo-box">
+            <p class="ejemplo-dato"><strong>Datos:</strong> a = 3, b = 4, c = 5</p>
+            <div class="paso">
+              <span class="paso-num">1</span>
+              <div>
+                <p class="formula-line">cos C = (9 + 16 − 25) / (2·3·4) = 0/24 = 0</p>
+                <p class="formula-line">C = arccos(0) = <strong>90°</strong></p>
+              </div>
+            </div>
+            <div class="paso">
+              <span class="paso-num">2</span>
+              <div>
+                <p class="formula-line">A = arccos((16+25−9)/40) ≈ <strong>36.87°</strong></p>
+                <p class="formula-line">B = 180° − 90° − 36.87° ≈ <strong>53.13°</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TABLA RESUMEN ───────────────────────────────────────── -->
+    <section class="tabla-section">
+      <h2>Tabla de referencia rápida</h2>
+      <div class="tabla-wrapper">
+        <table class="tabla-casos">
+          <thead>
+            <tr>
+              <th>Caso</th>
+              <th>Datos conocidos</th>
+              <th>Método</th>
+              <th>Soluciones posibles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="caso-badge sss">SSS</span></td>
+              <td>Tres lados</td>
+              <td>Ley de Cosenos</td>
+              <td>1 única</td>
+            </tr>
+            <tr>
+              <td><span class="caso-badge sas">SAS</span></td>
+              <td>2 lados + ángulo incluido</td>
+              <td>Ley de Cosenos</td>
+              <td>1 única</td>
+            </tr>
+            <tr>
+              <td><span class="caso-badge asa">ASA</span></td>
+              <td>2 ángulos + lado incluido</td>
+              <td>Ley de Senos</td>
+              <td>1 única</td>
+            </tr>
+            <tr>
+              <td><span class="caso-badge aas">AAS</span></td>
+              <td>2 ángulos + lado no incluido</td>
+              <td>Ley de Senos</td>
+              <td>1 única</td>
+            </tr>
+            <tr class="fila-ssa">
+              <td><span class="caso-badge ssa">SSA</span></td>
+              <td>2 lados + ángulo no incluido</td>
+              <td>Ley de Senos (ambiguo)</td>
+              <td>0, 1 ó 2 soluciones</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="page-nav bottom-nav">
+    <a href="calculator.html" class="nav-link">← Calculadora</a>
+    <a href="index.html" class="nav-link">Portada →</a>
+  </div>
+
+</body>
+</html>
